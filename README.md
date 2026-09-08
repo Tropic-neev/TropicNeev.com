@@ -1,27 +1,91 @@
-# Tropic
+# 🌴 Tropic NEEV
 
-Clothing built for warm-weather living.
+### Fashion for Everyone.
 
-This is the source for [Tropic's](https://tropic-neev.github.io/TropicNeev.com/) website — a clothing brand inspired by tropical style. The site is currently a pre-launch landing page while the product catalog is being built out.
+Tropic NEEV is a student entrepreneurship project developed for the **NEEEV Startup Stormers** initiative.
 
-**Live site:** https://tropic-neev.github.io/Tropic.com/
+Our idea combines **social media marketing, e-commerce, and affiliate marketing** to help customers discover trendy and affordable fashion products.
 
-## Structure
+---
 
-```
-.
-├── index.html      # Redirects to home.html
-├── home.html        # Main landing page
-├── 404.html          # Custom not-found page
-├── robots.txt       # Search engine crawling rules
-├── llms.txt          # Site summary for AI tools
-└── og-image.jpg    # Social media preview image
-```
+## 🚀 About Tropic NEEV
 
-## Status
+Tropic NEEV is an **Affordable Fashion Discovery Platform**.
 
-🚧 Pre-launch — product pages coming soon.
+We don't just sell clothes — we help customers **find the right fashion within their budget**.
 
+Our platform focuses on:
+
+- 👕 Affordable fashion
+- 📱 Social media marketing
+- 🛒 E-commerce
+- 🔗 Affiliate marketing
+- 📊 Product research and analysis
+- 🌱 Future scalable fashion opportunities
+
+---
+
+## 💡 How It Works
+
+Our business model follows this process:
+
+**FIND → CURATE → PROMOTE → SELL → ANALYZE → BUILD**
+
+### 1. 🔎 Find
+
+We search for interesting, affordable and trending fashion products.
+
+### 2. ✨ Curate
+
+We select products that provide good value and match customer interests.
+
+### 3. 📱 Promote
+
+Products are promoted through social media platforms such as Instagram.
+
+### 4. 🛍️ Sell
+
+Customers can discover products through Tropic NEEV and purchase them through trusted e-commerce platforms.
+
+### 5. 📊 Analyze
+
+We study customer interest, engagement and product performance.
+
+### 6. 🏷️ Build
+
+In the future, successful products and customer preferences can help us develop our own fashion products or private-label brand.
+
+---
+
+## 🌐 Website
+
+**Tropic NEEV Website:**
+
+https://tropic-neev.github.io/TropicNeev.com/
+
+---
+
+## 📸 Automatic Fashion Posts
+
+The website automatically detects posts from numbered folders.
+
+For example:
+
+```text
+posts/
+├── 1/
+│   ├── 1.jpg
+│   ├── 2.jpg
+│   └── 3.jpg
+│
+├── 2/
+│   ├── 1.jpg
+│   └── 2.jpg
+│
+└── 3/
+    ├── 1.jpg
+    ├── 2.jpg
+    └── 10.jpg
 ## Hosting
 
 Deployed via [GitHub Pages](https://pages.github.com/) from this repository.
