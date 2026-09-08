@@ -2,7 +2,7 @@
 
 Clothing built for warm-weather living.
 
-This is the source for [Tropic's](https://tropic-neev.github.io/Tropic.com/) website — a clothing brand inspired by tropical style. The site is currently a pre-launch landing page while the product catalog is being built out.
+This is the source for [Tropic's](https://tropic-neev.github.io/TropicNeev.com/) website — a clothing brand inspired by tropical style. The site is currently a pre-launch landing page while the product catalog is being built out.
 
 **Live site:** https://tropic-neev.github.io/Tropic.com/
 
