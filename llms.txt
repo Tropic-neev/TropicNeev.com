@@ -1,15 +1,129 @@
-# Tropic
+# Tropic NEEV
 
-> Tropic is a clothing brand inspired by tropical style, making apparel built for warm-weather living.
+> Tropic NEEV is an affordable fashion discovery platform and student entrepreneurship project developed for NEEEV Startup Stormers.
 
-Tropic is currently pre-launch. The site will be updated with the full product catalog soon.
+## Website
 
-## Pages
+https://tropic-neev.github.io/TropicNeev.com/
 
-- [Home](https://tropic-neev.github.io/Tropic.com/home.html): Landing page and brand introduction.
+## About
 
-## Notes
+Tropic NEEV combines social media marketing, e-commerce, and affiliate marketing to help customers discover trendy and affordable fashion products.
 
-- Brand name: Tropic
-- Category: Clothing / apparel
-- Status: Coming soon — product catalog not yet live
+The core idea is:
+
+FIND → CURATE → PROMOTE → SELL → ANALYZE → BUILD
+
+Tropic NEEV does not simply list clothing products. It focuses on helping customers discover suitable fashion within their budget.
+
+## Business Model
+
+Tropic NEEV initially focuses on affiliate marketing and digital product discovery.
+
+Potential revenue streams include:
+
+- Affiliate marketing commissions
+- E-commerce product margins
+- Future Tropic NEEV branded products
+- Future private-label fashion products
+
+## Target Market
+
+The platform is focused on customers looking for:
+
+- Affordable clothing
+- Trendy fashion
+- Fashion discoveries
+- Budget-friendly products
+- Online fashion shopping
+
+## Marketing
+
+Tropic NEEV uses social media marketing to promote fashion discoveries and drive customers toward the website and relevant product platforms.
+
+Key content areas include:
+
+- Fashion trends
+- Affordable outfit ideas
+- Product discoveries
+- Product showcases
+- Short-form fashion content
+- Customer engagement
+
+## Website Technology
+
+The website uses:
+
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
+- GitHub Contents API
+- Responsive web design
+
+## Automatic Posts
+
+The website automatically discovers fashion posts from numbered folders inside the `posts/` directory.
+
+Example:
+
+posts/1/
+posts/2/
+posts/3/
+
+Only folders whose names consist entirely of numbers are treated as posts.
+
+Only `.jpg` images are used for posts.
+
+Images are sorted numerically by their filenames.
+
+Example:
+
+1.jpg
+2.jpg
+10.jpg
+
+## Repository
+
+GitHub repository:
+
+https://github.com/tropic-neev/TropicNeev.com
+
+## Project
+
+Tropic NEEV is being developed as part of the NEEEV Startup Stormers entrepreneurship project.
+
+The project focuses on:
+
+- Problem identification
+- Market research
+- Customer validation
+- Prototype/MVP development
+- Business planning
+- Financial planning
+- Team collaboration
+- Scalability
+
+## Team
+
+- Anshul — Team Leader
+- Prakash — Finance Manager
+- Prakansh — Web Designer & Social Media
+- Kartik — Product Designer
+- Harsh — Customer Manager
+
+## USP
+
+"We don't just sell clothes — we help customers find the right fashion within their budget."
+
+## Future Direction
+
+Potential future development includes expanding product categories, improving product recommendations, increasing social media reach, collecting customer feedback, developing direct e-commerce capabilities, and eventually creating Tropic NEEV branded or private-label fashion products.
+
+## Important Files
+
+- Website: https://tropic-neev.github.io/TropicNeev.com/
+- Main page: https://tropic-neev.github.io/TropicNeev.com/home.html
+- Logo: https://tropic-neev.github.io/TropicNeev.com/logo.jpg
+- Sitemap: https://tropic-neev.github.io/TropicNeev.com/sitemap.xml
+- Robots: https://tropic-neev.github.io/TropicNeev.com/robots.txt
