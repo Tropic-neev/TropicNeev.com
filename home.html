@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
-    <!-- =========================================================
+    <!-- =========================
          SEO
-    ========================================================== -->
+    ========================== -->
 
     <title>Tropic NEEV | Affordable Fashion & E-Commerce</title>
 
@@ -21,45 +20,31 @@
         content="Tropic NEEV, Tropic, NEEV, Tropic fashion, NEEV fashion, affordable fashion, affordable clothing, fashion e-commerce, Tropic NEEV project, social media marketing, affiliate marketing"
     >
 
-    <meta
-        name="author"
-        content="Tropic NEEV"
-    >
+    <meta name="author" content="Tropic NEEV">
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
+    <meta name="robots" content="index, follow">
 
     <link
         rel="canonical"
         href="https://tropic-neev.github.io/TropicNeev.com/"
     >
 
-
-    <!-- =========================================================
-         VIEWPORT
-    ========================================================== -->
+    <!-- =========================
+         MOBILE
+    ========================== -->
 
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="theme-color"
-        content="#0f2b22"
-    >
+    <meta name="theme-color" content="#0f2b22">
 
-
-    <!-- =========================================================
+    <!-- =========================
          OPEN GRAPH
-    ========================================================== -->
+    ========================== -->
 
-    <meta
-        property="og:type"
-        content="website"
-    >
+    <meta property="og:type" content="website">
 
     <meta
         property="og:site_name"
@@ -83,13 +68,12 @@
 
     <meta
         property="og:image"
-        content="https://tropic-neev.github.io/TropicNeev.com/logo.png"
+        content="https://tropic-neev.github.io/TropicNeev.com/logo.jpg"
     >
 
-
-    <!-- =========================================================
+    <!-- =========================
          TWITTER / X
-    ========================================================== -->
+    ========================== -->
 
     <meta
         name="twitter:card"
@@ -108,13 +92,12 @@
 
     <meta
         name="twitter:image"
-        content="https://tropic-neev.github.io/TropicNeev.com/logo.png"
+        content="https://tropic-neev.github.io/TropicNeev.com/logo.jpg"
     >
 
-
-    <!-- =========================================================
+    <!-- =========================
          FONTS
-    ========================================================== -->
+    ========================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -129,10 +112,9 @@
         rel="stylesheet"
     >
 
-
-    <!-- =========================================================
+    <!-- =========================
          STRUCTURED DATA
-    ========================================================== -->
+    ========================== -->
 
     <script type="application/ld+json">
     {
@@ -140,11 +122,10 @@
         "@type": "Organization",
         "name": "Tropic NEEV",
         "url": "https://tropic-neev.github.io/TropicNeev.com/",
-        "logo": "https://tropic-neev.github.io/TropicNeev.com/logo.png",
+        "logo": "https://tropic-neev.github.io/TropicNeev.com/logo.jpg",
         "description": "Tropic NEEV is an affordable fashion platform combining social media marketing, e-commerce and affiliate marketing."
     }
     </script>
-
 
     <script type="application/ld+json">
     {
@@ -161,15 +142,11 @@
     </script>
 
 
-    <!-- =========================================================
-         CSS
-    ========================================================== -->
-
     <style>
 
-        /* =====================================================
+        /* =========================
            RESET
-        ====================================================== */
+        ========================== */
 
         * {
             margin: 0;
@@ -177,11 +154,9 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
             font-family: "Inter", sans-serif;
@@ -190,277 +165,158 @@
             line-height: 1.6;
         }
 
-
         img {
             max-width: 100%;
         }
-
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
-
         button {
             font-family: inherit;
         }
 
 
-        /* =====================================================
+        /* =========================
            VARIABLES
-        ====================================================== */
+        ========================== */
 
         :root {
-
             --palm: #0f2b22;
-
             --palm-deep: #081813;
-
             --sand: #f2e9d8;
-
             --papaya: #e8703a;
-
             --cream: #fffaf0;
-
             --muted: #647067;
-
             --white: #ffffff;
-
         }
 
 
-        /* =====================================================
+        /* =========================
            NAVIGATION
-        ====================================================== */
+        ========================== */
 
         header {
-
             position: sticky;
-
             top: 0;
-
             z-index: 1000;
 
-            background:
-                rgba(242, 233, 216, 0.92);
+            background: rgba(242, 233, 216, 0.92);
 
-            backdrop-filter:
-                blur(16px);
-
-            -webkit-backdrop-filter:
-                blur(16px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
 
             border-bottom:
                 1px solid rgba(15, 43, 34, 0.12);
-
         }
-
 
         .nav {
+            width: min(1200px, calc(100% - 40px));
+            min-height: 78px;
+            margin: auto;
 
-            width:
-                min(1200px, calc(100% - 40px));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-            min-height:
-                78px;
-
-            margin:
-                auto;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                space-between;
-
-            gap:
-                30px;
-
+            gap: 30px;
         }
-
 
         .brand {
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            gap:
-                12px;
-
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-
 
         .brand img {
-
-            width:
-                48px;
-
-            height:
-                48px;
-
-            object-fit:
-                contain;
-
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 50%;
         }
-
 
         .brand-text {
-
-            font-family:
-                "Fraunces", serif;
-
-            font-size:
-                25px;
-
-            font-weight:
-                700;
-
-            color:
-                var(--palm);
-
+            font-family: "Fraunces", serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--palm);
         }
-
 
         .brand-text span {
-
-            color:
-                var(--papaya);
-
+            color: var(--papaya);
         }
-
 
         .nav-links {
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            gap:
-                32px;
-
+            display: flex;
+            align-items: center;
+            gap: 32px;
         }
-
 
         .nav-links a {
-
-            font-size:
-                14px;
-
-            font-weight:
-                600;
-
-            color:
-                var(--palm);
-
-            transition:
-                0.2s ease;
-
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--palm);
+            transition: 0.2s ease;
         }
-
 
         .nav-links a:hover {
-
-            color:
-                var(--papaya);
-
+            color: var(--papaya);
         }
-
 
         .nav-button {
+            background: var(--palm);
+            color: white;
 
-            background:
-                var(--palm);
+            border: none;
+            padding: 12px 20px;
 
-            color:
-                white;
+            border-radius: 999px;
 
-            border:
-                none;
+            font-size: 14px;
+            font-weight: 700;
 
-            padding:
-                12px 20px;
+            cursor: pointer;
 
-            border-radius:
-                999px;
-
-            font-size:
-                14px;
-
-            font-weight:
-                700;
-
-            cursor:
-                pointer;
-
-            transition:
-                0.2s ease;
-
+            transition: 0.2s ease;
         }
-
 
         .nav-button:hover {
-
-            background:
-                var(--papaya);
-
-            transform:
-                translateY(-2px);
-
+            background: var(--papaya);
+            transform: translateY(-2px);
         }
 
 
-        /* =====================================================
+        /* =========================
            HERO
-        ====================================================== */
+        ========================== */
 
         .hero {
+            width: min(1200px, calc(100% - 40px));
 
-            width:
-                min(1200px, calc(100% - 40px));
+            min-height: 650px;
 
-            min-height:
-                650px;
+            margin: auto;
 
-            margin:
-                auto;
-
-            display:
-                grid;
+            display: grid;
 
             grid-template-columns:
                 1.05fr 0.95fr;
 
-            align-items:
-                center;
+            align-items: center;
 
-            gap:
-                70px;
+            gap: 70px;
 
-            padding:
-                80px 0;
-
+            padding: 80px 0;
         }
 
-
         .hero-label {
+            display: inline-flex;
 
-            display:
-                inline-flex;
+            align-items: center;
 
-            align-items:
-                center;
-
-            gap:
-                8px;
+            gap: 8px;
 
             background:
                 rgba(15, 43, 34, 0.08);
@@ -485,32 +341,22 @@
 
             margin-bottom:
                 22px;
-
         }
 
-
         .hero-label::before {
+            content: "";
 
-            content:
-                "";
-
-            width:
-                7px;
-
-            height:
-                7px;
+            width: 7px;
+            height: 7px;
 
             background:
                 var(--papaya);
 
             border-radius:
                 50%;
-
         }
 
-
         h1 {
-
             font-family:
                 "Fraunces", serif;
 
@@ -528,20 +374,14 @@
 
             margin-bottom:
                 28px;
-
         }
-
 
         h1 span {
-
             color:
                 var(--papaya);
-
         }
 
-
         .hero-description {
-
             max-width:
                 600px;
 
@@ -556,12 +396,9 @@
 
             margin-bottom:
                 32px;
-
         }
 
-
         .hero-buttons {
-
             display:
                 flex;
 
@@ -573,12 +410,9 @@
 
             flex-wrap:
                 wrap;
-
         }
 
-
         .primary-button {
-
             display:
                 inline-flex;
 
@@ -608,23 +442,17 @@
 
             transition:
                 0.2s ease;
-
         }
 
-
         .primary-button:hover {
-
             background:
                 var(--papaya);
 
             transform:
                 translateY(-2px);
-
         }
 
-
         .secondary-button {
-
             display:
                 inline-flex;
 
@@ -648,27 +476,22 @@
 
             transition:
                 0.2s ease;
-
         }
 
-
         .secondary-button:hover {
-
             border-color:
                 var(--palm);
 
             background:
                 rgba(15, 43, 34, 0.06);
-
         }
 
 
-        /* =====================================================
+        /* =========================
            HERO LOGO
-        ====================================================== */
+        ========================== */
 
         .hero-visual {
-
             display:
                 flex;
 
@@ -677,12 +500,9 @@
 
             justify-content:
                 center;
-
         }
 
-
         .logo-card {
-
             width:
                 min(450px, 100%);
 
@@ -708,31 +528,30 @@
                 45px;
 
             box-shadow:
-                0 30px 80px rgba(15, 43, 34, 0.12);
+                0 30px 80px
+                rgba(15, 43, 34, 0.12);
 
             transform:
                 rotate(2deg);
-
         }
 
-
         .logo-card img {
-
             width:
                 85%;
 
             max-width:
                 330px;
 
+            border-radius:
+                50%;
         }
 
 
-        /* =====================================================
+        /* =========================
            POSTS SECTION
-        ====================================================== */
+        ========================== */
 
         .posts-section {
-
             background:
                 var(--palm-deep);
 
@@ -741,23 +560,17 @@
 
             padding:
                 100px 0;
-
         }
 
-
         .section-inner {
-
             width:
                 min(1200px, calc(100% - 40px));
 
             margin:
                 auto;
-
         }
 
-
         .section-heading {
-
             display:
                 flex;
 
@@ -772,12 +585,9 @@
 
             margin-bottom:
                 45px;
-
         }
 
-
         .section-heading h2 {
-
             font-family:
                 "Fraunces", serif;
 
@@ -786,27 +596,22 @@
 
             line-height:
                 1;
-
         }
 
-
         .section-heading p {
-
             max-width:
                 450px;
 
             color:
                 rgba(255,255,255,0.65);
-
         }
 
 
-        /* =====================================================
-           POST GRID
-        ====================================================== */
+        /* =========================
+           POSTS GRID
+        ========================== */
 
         .posts-grid {
-
             display:
                 grid;
 
@@ -815,12 +620,9 @@
 
             gap:
                 24px;
-
         }
 
-
         .post-card {
-
             background:
                 #102e25;
 
@@ -838,23 +640,17 @@
 
             cursor:
                 pointer;
-
         }
 
-
         .post-card:hover {
-
             transform:
                 translateY(-6px);
 
             border-color:
                 rgba(255,255,255,0.18);
-
         }
 
-
         .post-image {
-
             width:
                 100%;
 
@@ -869,20 +665,14 @@
 
             background:
                 #17382e;
-
         }
-
 
         .post-content {
-
             padding:
                 20px;
-
         }
 
-
         .post-number {
-
             color:
                 var(--papaya);
 
@@ -900,12 +690,9 @@
 
             margin-bottom:
                 6px;
-
         }
 
-
         .post-title {
-
             font-family:
                 "Fraunces", serif;
 
@@ -914,27 +701,22 @@
 
             margin-bottom:
                 7px;
-
         }
 
-
         .post-count {
-
             color:
                 rgba(255,255,255,0.55);
 
             font-size:
                 13px;
-
         }
 
 
-        /* =====================================================
+        /* =========================
            ABOUT
-        ====================================================== */
+        ========================== */
 
         .about {
-
             width:
                 min(1200px, calc(100% - 40px));
 
@@ -952,12 +734,9 @@
 
             gap:
                 80px;
-
         }
 
-
         .about-label {
-
             color:
                 var(--papaya);
 
@@ -972,12 +751,9 @@
 
             letter-spacing:
                 1.5px;
-
         }
 
-
         .about h2 {
-
             font-family:
                 "Fraunces", serif;
 
@@ -992,12 +768,9 @@
 
             margin-top:
                 12px;
-
         }
 
-
         .about-content p {
-
             color:
                 var(--muted);
 
@@ -1009,24 +782,19 @@
 
             margin-bottom:
                 18px;
-
         }
-
 
         .about-content strong {
-
             color:
                 var(--palm);
-
         }
 
 
-        /* =====================================================
+        /* =========================
            FOOTER
-        ====================================================== */
+        ========================== */
 
         footer {
-
             background:
                 var(--palm-deep);
 
@@ -1035,12 +803,9 @@
 
             padding:
                 45px 0;
-
         }
 
-
         .footer-inner {
-
             width:
                 min(1200px, calc(100% - 40px));
 
@@ -1058,38 +823,30 @@
 
             gap:
                 25px;
-
         }
 
-
         .footer-brand {
-
             font-family:
                 "Fraunces", serif;
 
             font-size:
                 24px;
-
         }
 
-
         .footer-text {
-
             color:
                 rgba(255,255,255,0.55);
 
             font-size:
                 13px;
-
         }
 
 
-        /* =====================================================
+        /* =========================
            LOADING
-        ====================================================== */
+        ========================== */
 
         .loading {
-
             grid-column:
                 1 / -1;
 
@@ -1101,12 +858,9 @@
 
             color:
                 rgba(255,255,255,0.6);
-
         }
 
-
         .loading-spinner {
-
             width:
                 35px;
 
@@ -1114,7 +868,8 @@
                 35px;
 
             border:
-                3px solid rgba(255,255,255,0.15);
+                3px solid
+                rgba(255,255,255,0.15);
 
             border-top-color:
                 white;
@@ -1127,26 +882,21 @@
 
             margin:
                 0 auto 15px;
-
         }
 
-
         @keyframes spin {
-
             to {
                 transform:
                     rotate(360deg);
             }
-
         }
 
 
-        /* =====================================================
+        /* =========================
            ERROR
-        ====================================================== */
+        ========================== */
 
         .error-message {
-
             grid-column:
                 1 / -1;
 
@@ -1164,16 +914,14 @@
 
             color:
                 rgba(255,255,255,0.65);
-
         }
 
 
-        /* =====================================================
+        /* =========================
            GALLERY
-        ====================================================== */
+        ========================== */
 
         .gallery-overlay {
-
             position:
                 fixed;
 
@@ -1191,23 +939,17 @@
 
             padding:
                 30px 20px;
-
         }
 
-
         .gallery-container {
-
             width:
                 min(900px, 100%);
 
             margin:
                 auto;
-
         }
 
-
         .gallery-close {
-
             position:
                 fixed;
 
@@ -1246,12 +988,9 @@
 
             z-index:
                 10000;
-
         }
 
-
         .gallery-image {
-
             width:
                 100%;
 
@@ -1263,29 +1002,26 @@
 
             border-radius:
                 16px;
-
         }
 
 
-        /* =====================================================
-           MOBILE
-        ====================================================== */
+        /* =========================
+           RESPONSIVE
+        ========================== */
 
         @media (max-width: 850px) {
 
             .nav-links {
-                display: none;
+                display:
+                    none;
             }
-
 
             .nav-button {
                 padding:
                     10px 16px;
             }
 
-
             .hero {
-
                 grid-template-columns:
                     1fr;
 
@@ -1294,158 +1030,112 @@
 
                 gap:
                     50px;
-
             }
-
 
             .hero-visual {
                 order:
                     -1;
             }
 
-
             .logo-card {
-
                 max-width:
                     330px;
 
                 border-radius:
                     30px;
-
             }
-
 
             .posts-grid {
-
                 grid-template-columns:
                     repeat(2, 1fr);
-
             }
 
-
             .about {
-
                 grid-template-columns:
                     1fr;
 
                 gap:
                     30px;
-
             }
 
-
             .section-heading {
-
                 align-items:
                     flex-start;
 
                 flex-direction:
                     column;
-
             }
-
         }
 
 
         @media (max-width: 550px) {
 
             .nav {
-
                 width:
                     min(100% - 28px, 1200px);
 
                 min-height:
                     68px;
-
             }
 
-
             .brand img {
-
                 width:
                     40px;
 
                 height:
                     40px;
-
             }
-
 
             .brand-text {
-
                 font-size:
                     22px;
-
             }
 
-
             .hero {
-
                 width:
                     min(100% - 28px, 1200px);
 
                 padding:
                     50px 0;
-
             }
 
-
             h1 {
-
                 font-size:
                     53px;
 
                 letter-spacing:
                     -2px;
-
             }
-
 
             .hero-description {
-
                 font-size:
                     16px;
-
             }
-
 
             .posts-section {
-
                 padding:
                     70px 0;
-
             }
-
 
             .section-inner {
-
                 width:
                     min(100% - 28px, 1200px);
-
             }
-
 
             .posts-grid {
-
                 grid-template-columns:
                     1fr;
-
             }
 
-
             .about {
-
                 width:
                     min(100% - 28px, 1200px);
 
                 padding:
                     75px 0;
-
             }
 
-
             .footer-inner {
-
                 width:
                     min(100% - 28px, 1200px);
 
@@ -1454,9 +1144,7 @@
 
                 align-items:
                     flex-start;
-
             }
-
         }
 
     </style>
@@ -1467,9 +1155,9 @@
 <body>
 
 
-    <!-- =========================================================
-         NAVBAR
-    ========================================================== -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
     <header>
 
@@ -1485,7 +1173,7 @@
             >
 
                 <img
-                    src="./logo.png"
+                    src="./logo.jpg"
                     alt="Tropic NEEV logo"
                 >
 
@@ -1525,16 +1213,16 @@
     </header>
 
 
-    <!-- =========================================================
+    <!-- =========================
          MAIN
-    ========================================================== -->
+    ========================== -->
 
     <main>
 
 
-        <!-- =====================================================
+        <!-- =====================
              HERO
-        ====================================================== -->
+        ====================== -->
 
         <section
             class="hero"
@@ -1549,10 +1237,8 @@
 
 
                 <h1>
-
                     Fashion for
                     <span>Everyone.</span>
-
                 </h1>
 
 
@@ -1595,7 +1281,7 @@
                 <div class="logo-card">
 
                     <img
-                        src="./logo.png"
+                        src="./logo.jpg"
                         alt="Tropic NEEV affordable fashion logo"
                     >
 
@@ -1606,9 +1292,9 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =====================
              POSTS
-        ====================================================== -->
+        ====================== -->
 
         <section
             class="posts-section"
@@ -1655,15 +1341,14 @@
 
                 </div>
 
-
             </div>
 
         </section>
 
 
-        <!-- =====================================================
+        <!-- =====================
              ABOUT
-        ====================================================== -->
+        ====================== -->
 
         <section
             class="about"
@@ -1720,13 +1405,12 @@
 
         </section>
 
-
     </main>
 
 
-    <!-- =========================================================
+    <!-- =========================
          FOOTER
-    ========================================================== -->
+    ========================== -->
 
     <footer>
 
@@ -1751,50 +1435,46 @@
 
     <!-- =========================================================
          AUTOMATIC POST SYSTEM
-    ==========================================================
 
-         IMPORTANT:
+         POST STRUCTURE:
 
-         Only folders containing ONLY numbers are posts.
+         posts/
+         ├── 1/
+         │   ├── 1.jpg
+         │   ├── 2.jpg
+         │   └── 10.jpg
+         │
+         ├── 2/
+         │   ├── 1.jpg
+         │   └── 2.jpg
+         │
+         └── 3/
+             └── 1.jpg
 
-         Example:
+         ONLY NUMERIC FOLDERS ARE POSTS.
 
-         posts/1/
-         posts/2/
-         posts/3/
+         ONLY .JPG FILES ARE LOADED.
 
-         These become posts.
-
-         These are ignored:
-
-         posts/images/
-         posts/test/
-         posts/products/
-         posts/new/
-
-         ONLY .JPG FILES ARE USED.
-
-         Example:
-
-         posts/3/
-         ├── 1.jpg
-         ├── 2.jpg
-         └── 10.jpg
-
-         They will appear as:
+         NUMERIC SORT:
 
          1.jpg
          2.jpg
          10.jpg
+
+         NOT:
+
+         1.jpg
+         10.jpg
+         2.jpg
 
     ========================================================== -->
 
     <script>
 
 
-        /* =====================================================
-           GITHUB REPOSITORY
-        ====================================================== */
+        /* =========================
+           GITHUB SETTINGS
+        ========================== */
 
         const GITHUB_OWNER =
             "tropic-neev";
@@ -1808,33 +1488,33 @@
             "posts";
 
 
-        /* =====================================================
+        /* =========================
            GITHUB API
-        ====================================================== */
+        ========================== */
 
         const GITHUB_API =
             `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPOSITORY}/contents/${POSTS_FOLDER}`;
 
 
-        /* =====================================================
+        /* =========================
            WEBSITE POST PATH
-        ====================================================== */
+        ========================== */
 
         const WEBSITE_POST_PATH =
             "./posts";
 
 
-        /* =====================================================
+        /* =========================
            ONLY JPG
-        ====================================================== */
+        ========================== */
 
         const IMAGE_EXTENSION =
             ".jpg";
 
 
-        /* =====================================================
-           CHECK NUMBER FOLDER
-        ====================================================== */
+        /* =========================
+           CHECK NUMERIC FOLDER
+        ========================== */
 
         function isNumberFolder(name) {
 
@@ -1843,14 +1523,9 @@
         }
 
 
-        /* =====================================================
-           GET NUMBER FROM FILE NAME
-           
-           1.jpg  -> 1
-           2.jpg  -> 2
-           10.jpg -> 10
-
-        ====================================================== */
+        /* =========================
+           GET NUMBER FROM FILE
+        ========================== */
 
         function getFileNumber(filename) {
 
@@ -1872,22 +1547,24 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            CHECK JPG
-        ====================================================== */
+        ========================== */
 
         function isJPG(filename) {
 
             return filename
                 .toLowerCase()
-                .endsWith(IMAGE_EXTENSION);
+                .endsWith(
+                    IMAGE_EXTENSION
+                );
 
         }
 
 
-        /* =====================================================
-           NUMERIC FILE SORT
-        ====================================================== */
+        /* =========================
+           NUMERIC SORT
+        ========================== */
 
         function numericSort(a, b) {
 
@@ -1918,9 +1595,9 @@
         }
 
 
-        /* =====================================================
-           GET POSTS
-        ====================================================== */
+        /* =========================
+           GET ALL POSTS
+        ========================== */
 
         async function getPosts() {
 
@@ -1951,38 +1628,38 @@
 
 
             /*
-
-                Find ONLY numeric folders.
-
-            */
+             * ONLY directories whose
+             * names contain numbers.
+             */
 
             const postFolders =
                 items
 
-                    .filter(item =>
+                    .filter(item => {
 
-                        item.type === "dir" &&
+                        return (
+                            item.type === "dir" &&
+                            isNumberFolder(
+                                item.name
+                            )
+                        );
 
-                        isNumberFolder(
-                            item.name
-                        )
+                    })
 
-                    )
+                    .sort((a, b) => {
 
-                    .sort((a, b) =>
+                        return (
+                            Number(b.name) -
+                            Number(a.name)
+                        );
 
-                        Number(a.name) -
-                        Number(b.name)
-
-                    );
+                    });
 
 
             /*
-
-                Get images from every
-                numbered folder.
-
-            */
+             * Get JPG images from
+             * every post folder.
+             */
 
             const posts =
                 await Promise.all(
@@ -2011,23 +1688,22 @@
 
 
                             /*
-
-                                ONLY JPG FILES
-
-                            */
+                             * ONLY .JPG
+                             */
 
                             const images =
                                 files
 
-                                    .filter(file =>
+                                    .filter(file => {
 
-                                        file.type === "file" &&
+                                        return (
+                                            file.type === "file" &&
+                                            isJPG(
+                                                file.name
+                                            )
+                                        );
 
-                                        isJPG(
-                                            file.name
-                                        )
-
-                                    )
+                                    })
 
                                     .sort(
                                         numericSort
@@ -2035,10 +1711,9 @@
 
 
                             /*
-
-                                Ignore empty folders.
-
-                            */
+                             * Ignore folders
+                             * without JPG files.
+                             */
 
                             if (
                                 images.length === 0
@@ -2070,30 +1745,14 @@
                 );
 
 
-            /*
-
-                Remove empty folders.
-
-                Newest post first.
-
-            */
-
-            return posts
-
-                .filter(Boolean)
-
-                .sort(
-                    (a, b) =>
-                        b.number -
-                        a.number
-                );
+            return posts.filter(Boolean);
 
         }
 
 
-        /* =====================================================
+        /* =========================
            CREATE POST CARD
-        ====================================================== */
+        ========================== */
 
         function createPostCard(post) {
 
@@ -2109,16 +1768,13 @@
 
 
             /*
-             * First JPG is the cover.
+             * First image is
+             * the cover image.
              */
 
             const firstImage =
                 post.images[0];
 
-
-            /*
-             * Build image path.
-             */
 
             const imageURL =
                 `${WEBSITE_POST_PATH}/${post.folder}/${encodeURIComponent(firstImage.name)}`;
@@ -2167,16 +1823,15 @@
 
 
             /*
-             * Open gallery when clicked.
+             * Clicking opens
+             * the full post gallery.
              */
 
             card.addEventListener(
                 "click",
                 () => {
 
-                    openPostGallery(
-                        post
-                    );
+                    openPostGallery(post);
 
                 }
             );
@@ -2187,15 +1842,15 @@
         }
 
 
-        /* =====================================================
-           OPEN GALLERY
-        ====================================================== */
+        /* =========================
+           OPEN POST GALLERY
+        ========================== */
 
         function openPostGallery(post) {
 
 
             /*
-             * Remove old gallery.
+             * Remove existing gallery.
              */
 
             const existing =
@@ -2212,7 +1867,7 @@
 
 
             /*
-             * Overlay
+             * Create overlay.
              */
 
             const overlay =
@@ -2226,7 +1881,7 @@
 
 
             /*
-             * Container
+             * Gallery container.
              */
 
             const container =
@@ -2240,7 +1895,7 @@
 
 
             /*
-             * Close button
+             * Close button.
              */
 
             const close =
@@ -2263,7 +1918,8 @@
             );
 
 
-            close.onclick =
+            close.addEventListener(
+                "click",
                 () => {
 
                     overlay.remove();
@@ -2271,14 +1927,13 @@
                     document.body.style.overflow =
                         "";
 
-                };
+                }
+            );
 
 
             /*
-             * Add images.
-             *
-             * They are already
-             * numerically sorted.
+             * Add all JPG files
+             * in numeric order.
              */
 
             post.images.forEach(
@@ -2331,7 +1986,7 @@
 
 
             /*
-             * Prevent background scrolling.
+             * Stop background scrolling.
              */
 
             document.body.style.overflow =
@@ -2339,10 +1994,9 @@
 
 
             /*
-             * Click outside images
-             * to close.
-
-            */
+             * Clicking outside gallery
+             * closes it.
+             */
 
             overlay.addEventListener(
                 "click",
@@ -2366,9 +2020,9 @@
         }
 
 
-        /* =====================================================
-           ESC KEY
-        ====================================================== */
+        /* =========================
+           ESCAPE KEY
+        ========================== */
 
         document.addEventListener(
             "keydown",
@@ -2399,9 +2053,9 @@
         );
 
 
-        /* =====================================================
+        /* =========================
            LOAD POSTS
-        ====================================================== */
+        ========================== */
 
         async function loadPosts() {
 
@@ -2424,7 +2078,7 @@
 
 
                 /*
-                 * No posts found.
+                 * No posts yet.
                  */
 
                 if (
@@ -2439,7 +2093,7 @@
 
                             <br><br>
 
-                            Add your first post:
+                            Add a folder such as
 
                             <strong>
                                 posts/1/
@@ -2457,7 +2111,7 @@
 
 
                 /*
-                 * Display every post.
+                 * Display posts.
                  */
 
                 posts.forEach(
@@ -2491,8 +2145,8 @@
 
                     <div class="error-message">
 
-                        Unable to load fashion posts
-                        right now.
+                        Unable to load Tropic fashion
+                        posts right now.
 
                         <br><br>
 
@@ -2507,9 +2161,9 @@
         }
 
 
-        /* =====================================================
-           START WEBSITE
-        ====================================================== */
+        /* =========================
+           START
+        ========================== */
 
         loadPosts();
 
