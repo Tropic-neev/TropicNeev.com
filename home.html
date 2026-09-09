@@ -721,8 +721,6 @@
 
             transition: 0.3s ease;
 
-            cursor: pointer;
-
         }
 
 
@@ -737,16 +735,107 @@
         }
 
 
-        .post-image {
+        .post-image-wrapper {
 
             width: 100%;
 
             aspect-ratio:
                 1 / 1.05;
 
+            position: relative;
+
+            overflow: hidden;
+
+            touch-action: pan-y;
+
+            user-select: none;
+
+            -webkit-user-select: none;
+
+            cursor: grab;
+
+        }
+
+
+        .post-image-wrapper:active {
+
+            cursor: grabbing;
+
+        }
+
+
+        .post-image {
+
+            width: 100%;
+
+            height: 100%;
+
             object-fit: cover;
 
             display: block;
+
+            pointer-events: none;
+
+            user-select: none;
+
+            -webkit-user-drag: none;
+
+            transition: opacity 0.15s ease;
+
+        }
+
+
+        .post-dots {
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 14px;
+
+            transform:
+                translateX(-50%);
+
+            display: flex;
+
+            gap: 6px;
+
+            padding: 7px 10px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(0,0,0,0.5);
+
+            backdrop-filter:
+                blur(8px);
+
+        }
+
+
+        .post-dot {
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.45);
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .post-dot.active {
+
+            width: 17px;
+
+            border-radius: 999px;
+
+            background: white;
 
         }
 
@@ -971,83 +1060,6 @@
                 flex-wrap: wrap;
 
             }
-
-        }
-
-
-        /* =========================
-           GALLERY
-        ========================== */
-
-        .gallery-overlay {
-
-            position: fixed;
-
-            inset: 0;
-
-            z-index: 9999;
-
-            background:
-                rgba(0,0,0,0.94);
-
-            overflow-y: auto;
-
-            padding: 30px 20px;
-
-        }
-
-
-        .gallery-container {
-
-            width:
-                min(900px, 100%);
-
-            margin: auto;
-
-        }
-
-
-        .gallery-close {
-
-            position: fixed;
-
-            top: 18px;
-
-            right: 22px;
-
-            width: 48px;
-
-            height: 48px;
-
-            border: none;
-
-            border-radius: 50%;
-
-            background: white;
-
-            color:
-                var(--palm);
-
-            font-size: 30px;
-
-            line-height: 1;
-
-            cursor: pointer;
-
-            z-index: 10000;
-
-        }
-
-
-        .gallery-image {
-
-            width: 100%;
-
-            display: block;
-
-            margin-bottom: 20px;
-
-            border-radius: 16px;
 
         }
 
@@ -1666,12 +1678,27 @@
 
             card.innerHTML = `
 
-                <img
-                    class="post-image"
-                    src="${post.images[0]}"
-                    alt="Tropic NEEV fashion post ${post.number}"
-                    loading="lazy"
-                >
+                <div class="post-image-wrapper" data-post="${post.number}">
+
+                    <img
+                        class="post-image"
+                        src="${post.images[0]}"
+                        alt="Tropic NEEV fashion post ${post.number}"
+                        draggable="false"
+                    >
+
+
+                    <div class="post-dots">
+
+                        <span class="post-dot active"></span>
+
+                        <span class="post-dot"></span>
+
+                        <span class="post-dot"></span>
+
+                    </div>
+
+                </div>
 
                 <div class="post-content">
 
@@ -1691,7 +1718,7 @@
 
                     <div class="post-count">
 
-                        3 images · Tap to view
+                        3 images · Swipe to view
 
                     </div>
 
@@ -1700,216 +1727,237 @@
             `;
 
 
-            card.addEventListener(
-                "click",
-                function () {
-
-                    openGallery(post);
-
-                }
-            );
-
-
             postsGrid.appendChild(card);
 
 
-        });
-
-
-        /*
-        =========================================================
-        OPEN GALLERY
-        =========================================================
-        */
-
-        function openGallery(post) {
-
-
-            const overlay =
-                document.createElement(
-                    "div"
-                );
-
-
-            overlay.className =
-                "gallery-overlay";
-
-
-            const container =
-                document.createElement(
-                    "div"
-                );
-
-
-            container.className =
-                "gallery-container";
-
-
-            const close =
-                document.createElement(
-                    "button"
-                );
-
-
-            close.className =
-                "gallery-close";
-
-
-            close.innerHTML =
-                "×";
-
-
-            close.setAttribute(
-                "aria-label",
-                "Close gallery"
-            );
-
-
-            close.addEventListener(
-                "click",
-                closeGallery
-            );
-
-
             /*
-            Add all three images.
+            =====================================================
+            SWIPE CAROUSEL
+
+            The user swipes directly on the image,
+            no click or tap needed to open anything.
+            =====================================================
             */
 
-            post.images.forEach(
-                function (
-                    imagePath,
-                    index
-                ) {
+            const imageWrapper =
+                card.querySelector(
+                    ".post-image-wrapper"
+                );
 
 
-                    const image =
-                        document.createElement(
-                            "img"
-                        );
+            const image =
+                card.querySelector(
+                    ".post-image"
+                );
 
 
-                    image.className =
-                        "gallery-image";
+            const dots =
+                card.querySelectorAll(
+                    ".post-dot"
+                );
 
+
+            let currentIndex = 0;
+
+            let startX = 0;
+
+            let startY = 0;
+
+            let isDragging = false;
+
+
+            function showImage(index) {
+
+
+                currentIndex =
+                    (index + post.images.length) %
+                    post.images.length;
+
+
+                image.style.opacity = "0";
+
+
+                setTimeout(() => {
 
                     image.src =
-                        imagePath;
+                        post.images[currentIndex];
+
+                    image.style.opacity = "1";
+
+                }, 80);
 
 
-                    image.alt =
-                        `Tropic NEEV Post ${post.number} image ${index + 1}`;
+                dots.forEach(
+                    (dot, dotIndex) => {
 
-
-                    image.loading =
-                        "lazy";
-
-
-                    container.appendChild(
-                        image
-                    );
-
-
-                }
-            );
-
-
-            overlay.appendChild(
-                close
-            );
-
-
-            overlay.appendChild(
-                container
-            );
-
-
-            document.body.appendChild(
-                overlay
-            );
-
-
-            document.body.style.overflow =
-                "hidden";
-
-
-            /*
-            Close when clicking
-            outside the images.
-            */
-
-            overlay.addEventListener(
-                "click",
-                function (event) {
-
-
-                    if (
-                        event.target === overlay
-                    ) {
-
-                        closeGallery();
+                        dot.classList.toggle(
+                            "active",
+                            dotIndex === currentIndex
+                        );
 
                     }
-
-                }
-            );
-
-
-            /*
-            Close function.
-            */
-
-            function closeGallery() {
-
-
-                overlay.remove();
-
-
-                document.body.style.overflow =
-                    "";
+                );
 
             }
 
-        }
+
+            function handleSwipe(deltaX) {
 
 
-        /*
-        =========================================================
-        ESC KEY
-        =========================================================
-        */
-
-        document.addEventListener(
-            "keydown",
-            function (event) {
+                const minimumSwipe = 45;
 
 
                 if (
-                    event.key === "Escape"
+                    Math.abs(deltaX) < minimumSwipe
                 ) {
+                    return;
+                }
 
 
-                    const gallery =
-                        document.querySelector(
-                            ".gallery-overlay"
-                        );
+                if (deltaX < 0) {
 
+                    // Swipe left → next image
 
-                    if (gallery) {
+                    showImage(
+                        currentIndex + 1
+                    );
 
+                } else {
 
-                        gallery.remove();
+                    // Swipe right → previous image
 
-
-                        document.body.style.overflow =
-                            "";
-
-
-                    }
+                    showImage(
+                        currentIndex - 1
+                    );
 
                 }
 
             }
-        );
+
+
+            /* TOUCH */
+
+            imageWrapper.addEventListener(
+                "touchstart",
+                (event) => {
+
+                    const touch =
+                        event.touches[0];
+
+
+                    startX = touch.clientX;
+
+                    startY = touch.clientY;
+
+                    isDragging = true;
+
+                },
+                { passive: true }
+            );
+
+
+            imageWrapper.addEventListener(
+                "touchend",
+                (event) => {
+
+
+                    if (!isDragging) {
+                        return;
+                    }
+
+
+                    const touch =
+                        event.changedTouches[0];
+
+
+                    const deltaX =
+                        touch.clientX - startX;
+
+
+                    const deltaY =
+                        touch.clientY - startY;
+
+
+                    isDragging = false;
+
+
+                    if (
+                        Math.abs(deltaX) > Math.abs(deltaY)
+                    ) {
+
+                        handleSwipe(deltaX);
+
+                    }
+
+                },
+                { passive: true }
+            );
+
+
+            /* MOUSE / DESKTOP DRAG */
+
+            imageWrapper.addEventListener(
+                "mousedown",
+                (event) => {
+
+
+                    startX = event.clientX;
+
+                    startY = event.clientY;
+
+                    isDragging = true;
+
+
+                    event.preventDefault();
+
+                }
+            );
+
+
+            imageWrapper.addEventListener(
+                "mouseup",
+                (event) => {
+
+
+                    if (!isDragging) {
+                        return;
+                    }
+
+
+                    const deltaX =
+                        event.clientX - startX;
+
+
+                    const deltaY =
+                        event.clientY - startY;
+
+
+                    isDragging = false;
+
+
+                    if (
+                        Math.abs(deltaX) > Math.abs(deltaY)
+                    ) {
+
+                        handleSwipe(deltaX);
+
+                    }
+
+                }
+            );
+
+
+            imageWrapper.addEventListener(
+                "mouseleave",
+                () => {
+
+                    isDragging = false;
+
+                }
+            );
+
+
+        });
 
 
     </script>
