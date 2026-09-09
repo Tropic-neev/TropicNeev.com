@@ -1,1498 +1,1920 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Tropic NEEV — Fashion for Everyone.</title>
-
-  <meta name="description"
-        content="Tropic NEEV — affordable and trending fashion, discovered through social media and simple online shopping.">
-
-  <meta name="theme-color" content="#0F2B22">
-
-  <meta property="og:title" content="Tropic NEEV — Fashion for Everyone.">
-  <meta property="og:description"
-        content="Affordable and trending fashion, curated by Tropic NEEV.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="./logo.png">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Tropic NEEV — Fashion for Everyone.">
-  <meta name="twitter:description"
-        content="Affordable and trending fashion, curated by Tropic NEEV.">
-  <meta name="twitter:image" content="./logo.png">
-
-  <link rel="icon" type="image/png" href="./logo.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-  <style>
-    :root {
-      --deep: #0F2B22;
-      --dark: #081813;
-      --cream: #F2E9D8;
-      --orange: #E8703A;
-      --muted: rgba(242, 233, 216, 0.68);
-      --line: rgba(242, 233, 216, 0.14);
-    }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <title>
+        Tropic NEEV | Affordable Fashion & E-Commerce
+    </title>
 
-    body {
-      background: var(--dark);
-      color: var(--cream);
-      font-family: "Inter", sans-serif;
-      overflow-x: hidden;
-    }
+    <meta
+        name="description"
+        content="Tropic NEEV is an affordable fashion platform combining social media marketing, e-commerce and affiliate marketing to help everyone discover trendy fashion within their budget."
+    >
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    <meta
+        name="keywords"
+        content="Tropic NEEV, Tropic, NEEV, Tropic fashion, NEEV fashion, affordable fashion, affordable clothing, fashion e-commerce, affiliate marketing"
+    >
 
-    /* =========================
-       FIXED TOP / HERO
-       ========================= */
-
-    .top-screen {
-      position: fixed;
-      inset: 0;
-      height: 100vh;
-      height: 100svh;
-      z-index: 10;
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at 75% 45%,
-          rgba(232, 112, 58, 0.12),
-          transparent 28%
-        ),
-        linear-gradient(135deg, var(--deep), var(--dark));
-    }
+    <meta
+        name="author"
+        content="Tropic NEEV"
+    >
 
-    .top-screen::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(8, 24, 19, 0.28),
-          transparent 55%
-        ),
-        linear-gradient(
-          180deg,
-          rgba(8, 24, 19, 0.1),
-          rgba(8, 24, 19, 0.45)
-        );
-
-      pointer-events: none;
-    }
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    /* =========================
-       NAVIGATION
-       ========================= */
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    .nav {
-      position: relative;
-      z-index: 2;
+    <meta
+        name="theme-color"
+        content="#0f2b22"
+    >
 
-      height: 82px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    <!-- Canonical -->
 
-      padding: 0 5vw;
+    <link
+        rel="canonical"
+        href="https://tropic-neev.github.io/TropicNeev.com/"
+    >
 
-      border-bottom: 1px solid rgba(242, 233, 216, 0.1);
-    }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-
-      font-family: "Fraunces", serif;
-      font-size: 1.45rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
+    <!-- Open Graph -->
 
-    .brand img {
-      width: 42px;
-      height: 42px;
+    <meta
+        property="og:type"
+        content="website"
+    >
 
-      border-radius: 50%;
-      object-fit: cover;
+    <meta
+        property="og:site_name"
+        content="Tropic NEEV"
+    >
 
-      display: block;
-    }
+    <meta
+        property="og:title"
+        content="Tropic NEEV | Affordable Fashion"
+    >
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 34px;
+    <meta
+        property="og:description"
+        content="Discover trendy and affordable fashion with Tropic NEEV."
+    >
 
-      font-size: 0.88rem;
-      color: rgba(242, 233, 216, 0.78);
-    }
+    <meta
+        property="og:url"
+        content="https://tropic-neev.github.io/TropicNeev.com/"
+    >
 
-    .nav-links a {
-      transition: color 0.2s ease;
-    }
+    <meta
+        property="og:image"
+        content="https://tropic-neev.github.io/TropicNeev.com/logo.png"
+    >
 
-    .nav-links a:hover {
-      color: var(--cream);
-    }
 
-    .nav-cta {
-      padding: 11px 18px;
+    <!-- Twitter / X -->
 
-      border: 1px solid rgba(242, 233, 216, 0.22);
-      border-radius: 999px;
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
 
-      transition: all 0.2s ease;
-    }
+    <meta
+        name="twitter:title"
+        content="Tropic NEEV | Affordable Fashion"
+    >
 
-    .nav-cta:hover {
-      background: var(--cream);
-      color: var(--dark);
-    }
+    <meta
+        name="twitter:description"
+        content="Tropic NEEV — trendy and affordable fashion."
+    >
 
-    /* =========================
-       HERO
-       ========================= */
+    <meta
+        name="twitter:image"
+        content="https://tropic-neev.github.io/TropicNeev.com/logo.png"
+    >
 
-    .hero {
-      position: relative;
-      z-index: 2;
 
-      min-height: calc(100vh - 82px);
-      min-height: calc(100svh - 82px);
+    <!-- Fonts -->
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-      padding: 5vw;
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-      max-width: 1050px;
-    }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+        rel="stylesheet"
+    >
 
-    .eyebrow {
-      color: var(--orange);
 
-      font-size: 0.78rem;
-      font-weight: 700;
+    <!-- Structured Data -->
 
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+    <script type="application/ld+json">
 
-      margin-bottom: 18px;
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tropic NEEV",
+        "url": "https://tropic-neev.github.io/TropicNeev.com/",
+        "logo": "https://tropic-neev.github.io/TropicNeev.com/logo.png",
+        "description": "Tropic NEEV is an affordable fashion platform combining social media marketing, e-commerce and affiliate marketing."
     }
 
-    .hero h1 {
-      font-family: "Fraunces", serif;
+    </script>
 
-      font-size: clamp(4rem, 10vw, 9rem);
-      line-height: 0.88;
 
-      font-weight: 600;
-      letter-spacing: -0.055em;
+    <script type="application/ld+json">
 
-      max-width: 850px;
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Tropic NEEV",
+        "alternateName": [
+            "Tropic",
+            "Tropic Fashion",
+            "Tropic NEEV"
+        ],
+        "url": "https://tropic-neev.github.io/TropicNeev.com/"
     }
 
-    .hero p {
-      max-width: 600px;
+    </script>
 
-      margin-top: 28px;
 
-      color: var(--muted);
+    <style>
 
-      font-size: clamp(1rem, 1.5vw, 1.15rem);
-      line-height: 1.7;
-    }
+        /* =========================
+           RESET
+        ========================== */
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      margin-top: 34px;
-    }
 
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+        html {
+            scroll-behavior: smooth;
+        }
 
-      min-height: 48px;
 
-      padding: 0 21px;
+        body {
+            font-family: "Inter", sans-serif;
 
-      border-radius: 999px;
-      border: 1px solid rgba(242, 233, 216, 0.2);
+            background: #f2e9d8;
 
-      font-size: 0.9rem;
-      font-weight: 600;
+            color: #192837;
 
-      transition: all 0.25s ease;
-    }
+            line-height: 1.6;
+        }
 
-    .button.primary {
-      background: var(--cream);
-      color: var(--dark);
-    }
 
-    .button.secondary {
-      color: var(--cream);
-      background: transparent;
-    }
+        img {
+            max-width: 100%;
+        }
 
-    .button:hover {
-      transform: translateY(-2px);
-    }
 
-    .button.secondary:hover {
-      background: rgba(242, 233, 216, 0.08);
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    .hero-bottom {
-      position: absolute;
 
-      left: 5vw;
-      right: 5vw;
-      bottom: 28px;
+        button {
+            font-family: inherit;
+        }
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      color: rgba(242, 233, 216, 0.55);
+        :root {
 
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+            --palm: #0f2b22;
 
-    .scroll-note {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
+            --palm-deep: #081813;
 
-    .scroll-line {
-      width: 34px;
-      height: 1px;
+            --sand: #f2e9d8;
 
-      background: rgba(242, 233, 216, 0.45);
-    }
+            --papaya: #e8703a;
 
-    /* =========================
-       PAGE CONTENT
-       ========================= */
+            --cream: #fffaf0;
 
-    .page-content {
-      position: relative;
-      z-index: 1;
+            --muted: #647067;
 
-      margin-top: 100vh;
-      margin-top: 100svh;
+            --white: #ffffff;
 
-      background: var(--cream);
-      color: var(--dark);
-    }
+        }
 
-    section {
-      padding: 100px 5vw;
-    }
 
-    .section-inner {
-      max-width: 1250px;
-      margin: 0 auto;
-    }
+        /* =========================
+           NAVIGATION
+        ========================== */
 
-    .section-label {
-      color: var(--orange);
+        header {
 
-      font-size: 0.75rem;
-      font-weight: 700;
+            position: sticky;
 
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
+            top: 0;
 
-      margin-bottom: 14px;
-    }
+            z-index: 1000;
 
-    .section-title {
-      font-family: "Fraunces", serif;
+            background:
+                rgba(242, 233, 216, 0.94);
 
-      font-size: clamp(3rem, 6vw, 5.8rem);
-      line-height: 0.95;
+            backdrop-filter:
+                blur(16px);
 
-      letter-spacing: -0.045em;
-      font-weight: 600;
-    }
+            -webkit-backdrop-filter:
+                blur(16px);
 
-    /* =========================
-       FASHION
-       ========================= */
+            border-bottom:
+                1px solid
+                rgba(15, 43, 34, 0.12);
 
-    .fashion-section {
-      background: var(--cream);
-    }
+        }
 
-    .fashion-intro {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
 
-      gap: 30px;
+        .nav {
 
-      margin-bottom: 45px;
-    }
+            width:
+                min(1200px, calc(100% - 40px));
 
-    .fashion-intro p {
-      max-width: 440px;
+            min-height: 78px;
 
-      color: rgba(8, 24, 19, 0.64);
+            margin: auto;
 
-      line-height: 1.7;
-      font-size: 0.98rem;
-    }
+            display: flex;
 
-    .shop-now {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+            align-items: center;
 
-      gap: 25px;
+            justify-content: space-between;
 
-      padding: 22px 0;
-      margin-bottom: 55px;
+            gap: 30px;
 
-      border-top: 1px solid rgba(8, 24, 19, 0.15);
-      border-bottom: 1px solid rgba(8, 24, 19, 0.15);
-    }
+        }
 
-    .shop-now p {
-      max-width: 650px;
 
-      color: rgba(8, 24, 19, 0.62);
+        .brand {
 
-      line-height: 1.6;
-      font-size: 0.9rem;
-    }
+            display: flex;
 
-    .shop-button {
-      flex-shrink: 0;
+            align-items: center;
 
-      display: inline-flex;
-      align-items: center;
+            gap: 12px;
 
-      gap: 9px;
+        }
 
-      background: var(--dark);
-      color: var(--cream);
 
-      padding: 13px 19px;
+        .brand img {
 
-      border-radius: 999px;
+            width: 48px;
 
-      font-size: 0.85rem;
-      font-weight: 600;
+            height: 48px;
 
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-    }
+            object-fit: contain;
 
-    .shop-button:hover {
-      transform: translateY(-2px);
-      background: var(--deep);
-    }
+            border-radius: 50%;
 
-    .cart-icon {
-      font-size: 1rem;
-    }
+        }
 
-    /* =========================
-       POSTS
-       ========================= */
 
-    .posts-grid {
-      display: grid;
+        .brand-text {
 
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+            font-family:
+                "Fraunces", serif;
 
-      gap: 55px 28px;
-    }
+            font-size: 25px;
 
-    .post {
-      min-width: 0;
-    }
+            font-weight: 700;
 
-    .post-media {
-      position: relative;
+            color: var(--palm);
 
-      overflow: hidden;
+        }
 
-      border-radius: 18px;
 
-      background: #d9d0c0;
+        .brand-text span {
 
-      aspect-ratio: 4 / 5;
+            color: var(--papaya);
 
-      cursor: grab;
+        }
 
-      user-select: none;
 
-      touch-action: pan-y;
-    }
+        .nav-links {
 
-    .post-media:active {
-      cursor: grabbing;
-    }
+            display: flex;
 
-    .post-track {
-      display: flex;
+            align-items: center;
 
-      width: 100%;
-      height: 100%;
+            gap: 32px;
 
-      transition: transform 0.35s ease;
+        }
 
-      will-change: transform;
-    }
 
-    .post-track img {
-      flex: 0 0 100%;
+        .nav-links a {
 
-      width: 100%;
-      height: 100%;
+            font-size: 14px;
 
-      object-fit: cover;
+            font-weight: 600;
 
-      display: block;
+            color: var(--palm);
 
-      pointer-events: none;
+            transition: 0.2s ease;
 
-      -webkit-user-drag: none;
-    }
+        }
 
-    .post-number {
-      margin-top: 17px;
 
-      color: var(--orange);
+        .nav-links a:hover {
 
-      font-size: 0.72rem;
-      font-weight: 700;
+            color: var(--papaya);
 
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
+        }
 
-    .post-title {
-      margin-top: 7px;
 
-      font-family: "Fraunces", serif;
+        .nav-button {
 
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      line-height: 1;
+            background: var(--palm);
 
-      letter-spacing: -0.035em;
-    }
+            color: white;
 
-    .post-bottom {
-      margin-top: 18px;
+            padding: 12px 20px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+            border-radius: 999px;
 
-      gap: 15px;
-    }
+            font-size: 14px;
 
-    .post-shop {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+            font-weight: 700;
 
-      min-height: 42px;
+            transition: 0.2s ease;
 
-      padding: 0 17px;
+        }
 
-      border-radius: 999px;
 
-      background: var(--dark);
-      color: var(--cream);
+        .nav-button:hover {
 
-      font-size: 0.78rem;
-      font-weight: 600;
+            background: var(--papaya);
 
-      transition: transform 0.2s ease;
-    }
+            transform: translateY(-2px);
 
-    .post-shop:hover {
-      transform: translateY(-2px);
-    }
+        }
 
-    .dots {
-      display: flex;
-      gap: 6px;
-      align-items: center;
-    }
 
-    .dot {
-      width: 6px;
-      height: 6px;
+        /* =========================
+           HERO
+        ========================== */
 
-      border-radius: 50%;
+        .hero {
 
-      background: rgba(8, 24, 19, 0.2);
+            width:
+                min(1200px, calc(100% - 40px));
 
-      transition: all 0.25s ease;
-    }
+            min-height: 650px;
 
-    .dot.active {
-      width: 18px;
+            margin: auto;
 
-      border-radius: 999px;
+            display: grid;
 
-      background: var(--orange);
-    }
+            grid-template-columns:
+                1.05fr 0.95fr;
 
-    /* =========================
-       ABOUT
-       ========================= */
+            align-items: center;
 
-    .about-section {
-      background: var(--dark);
-      color: var(--cream);
-    }
+            gap: 70px;
 
-    .about-grid {
-      display: grid;
+            padding: 80px 0;
 
-      grid-template-columns:
-        1fr 1fr;
+        }
 
-      gap: 70px;
 
-      align-items: start;
-    }
+        .hero-label {
 
-    .about-section .section-label {
-      color: var(--orange);
-    }
+            display: inline-flex;
 
-    .about-copy {
-      color: var(--muted);
+            align-items: center;
 
-      line-height: 1.8;
-      font-size: 1rem;
-    }
+            gap: 8px;
 
-    .about-copy p + p {
-      margin-top: 20px;
-    }
+            background:
+                rgba(15, 43, 34, 0.08);
 
-    .about-points {
-      margin-top: 34px;
+            border:
+                1px solid
+                rgba(15, 43, 34, 0.12);
 
-      display: grid;
-      gap: 14px;
-    }
+            padding: 8px 14px;
 
-    .about-point {
-      padding: 19px 0;
+            border-radius: 999px;
 
-      border-top: 1px solid var(--line);
-    }
+            color: var(--palm);
 
-    .about-point:last-child {
-      border-bottom: 1px solid var(--line);
-    }
+            font-size: 13px;
 
-    .about-point strong {
-      display: block;
+            font-weight: 700;
 
-      font-family: "Fraunces", serif;
+            margin-bottom: 22px;
 
-      font-size: 1.45rem;
-      font-weight: 500;
+        }
 
-      margin-bottom: 5px;
-    }
 
-    .about-point span {
-      color: rgba(242, 233, 216, 0.58);
+        .hero-label::before {
 
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
+            content: "";
 
-    /* =========================
-       FOOTER
-       ========================= */
+            width: 7px;
 
-    footer {
-      background: var(--dark);
-      color: var(--cream);
+            height: 7px;
 
-      border-top: 1px solid var(--line);
+            background:
+                var(--papaya);
 
-      padding: 45px 5vw 32px;
-    }
+            border-radius: 50%;
 
-    .footer-inner {
-      max-width: 1250px;
+        }
 
-      margin: 0 auto;
 
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
+        h1 {
 
-      gap: 30px;
-    }
+            font-family:
+                "Fraunces", serif;
 
-    .footer-brand {
-      font-family: "Fraunces", serif;
-      font-size: 1.8rem;
-    }
+            color:
+                var(--palm-deep);
 
-    .footer-tagline {
-      color: rgba(242, 233, 216, 0.58);
+            font-size:
+                clamp(52px, 7vw, 92px);
 
-      margin-top: 6px;
+            line-height: 0.98;
 
-      font-size: 0.85rem;
-    }
+            letter-spacing: -3px;
 
-    .footer-right {
-      text-align: right;
+            margin-bottom: 28px;
 
-      color: rgba(242, 233, 216, 0.65);
+        }
 
-      font-size: 0.82rem;
-      line-height: 1.8;
-    }
 
-    .footer-right a:hover {
-      color: var(--cream);
-    }
+        h1 span {
 
-    .footer-bottom {
-      max-width: 1250px;
+            color:
+                var(--papaya);
 
-      margin: 35px auto 0;
+        }
 
-      padding-top: 20px;
 
-      border-top: 1px solid var(--line);
+        .hero-description {
 
-      color: rgba(242, 233, 216, 0.4);
+            max-width: 600px;
 
-      font-size: 0.72rem;
-    }
+            color:
+                var(--muted);
 
-    /* =========================
-       TABLET / MOBILE
-       ========================= */
-
-    @media (max-width: 800px) {
-
-      .nav {
-        height: 72px;
-        padding: 0 5vw;
-      }
-
-      .nav-links {
-        gap: 15px;
-        font-size: 0.75rem;
-      }
-
-      .nav-cta {
-        display: none;
-      }
-
-      .hero {
-        min-height: calc(100svh - 72px);
-        padding: 8vw 5vw;
-      }
-
-      .hero h1 {
-        font-size: clamp(3.5rem, 17vw, 6rem);
-      }
-
-      .hero-bottom {
-        bottom: 22px;
-      }
-
-      section {
-        padding: 75px 5vw;
-      }
-
-      .fashion-intro {
-        display: block;
-      }
-
-      .fashion-intro p {
-        margin-top: 22px;
-      }
-
-      .shop-now {
-        display: block;
-      }
-
-      .shop-now p {
-        margin-top: 18px;
-      }
-
-      .posts-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .footer-inner {
-        display: block;
-      }
-
-      .footer-right {
-        text-align: left;
-        margin-top: 25px;
-      }
-    }
+            font-size: 18px;
 
-    @media (max-width: 480px) {
+            line-height: 1.75;
 
-      .brand {
-        font-size: 1.15rem;
-      }
+            margin-bottom: 32px;
 
-      .brand img {
-        width: 36px;
-        height: 36px;
-      }
+        }
 
-      .nav-links a:nth-child(2) {
-        display: none;
-      }
 
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        .hero-buttons {
 
-        max-width: 230px;
-      }
+            display: flex;
 
-      .hero-bottom {
-        font-size: 0.65rem;
-      }
+            align-items: center;
 
-      .hero-bottom > span {
-        display: none;
-      }
+            gap: 14px;
 
-      .post-media {
-        border-radius: 14px;
-      }
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Tropic NEEV",
-    "url": "https://tropic-neev.github.io/TropicNeev.com/",
-    "logo": "https://tropic-neev.github.io/TropicNeev.com/logo.png",
-    "email": "tropic.neev@gmail.com",
-    "sameAs": [
-      "https://www.instagram.com/tropic.neev?stkn=MnV6bmNvdXN3eXU="
-    ]
-  }
-  </script>
+            flex-wrap: wrap;
+
+        }
+
+
+        .primary-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 15px 22px;
+
+            background:
+                var(--palm);
+
+            color: white;
+
+            border-radius: 999px;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .primary-button:hover {
+
+            background:
+                var(--papaya);
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .secondary-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            padding: 15px 22px;
+
+            border:
+                1px solid
+                rgba(15, 43, 34, 0.25);
+
+            border-radius: 999px;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .secondary-button:hover {
+
+            background:
+                rgba(15, 43, 34, 0.06);
+
+        }
+
+
+        /* =========================
+           LOGO CARD
+        ========================== */
+
+        .hero-visual {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .logo-card {
+
+            width:
+                min(450px, 100%);
+
+            aspect-ratio: 1;
+
+            background:
+                var(--cream);
+
+            border-radius: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 45px;
+
+            box-shadow:
+                0 30px 80px
+                rgba(15, 43, 34, 0.12);
+
+            transform:
+                rotate(2deg);
+
+        }
+
+
+        .logo-card img {
+
+            width: 85%;
+
+            max-width: 330px;
+
+            border-radius: 50%;
+
+        }
+
+
+        /* =========================
+           FASHION SECTION
+        ========================== */
+
+        .posts-section {
+
+            background:
+                var(--palm-deep);
+
+            color: white;
+
+            padding: 100px 0;
+
+        }
+
+
+        .section-inner {
+
+            width:
+                min(1200px, calc(100% - 40px));
+
+            margin: auto;
+
+        }
+
+
+        .section-heading {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: end;
+
+            gap: 30px;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .section-heading h2 {
+
+            font-family:
+                "Fraunces", serif;
+
+            font-size:
+                clamp(40px, 5vw, 64px);
+
+            line-height: 1;
+
+        }
+
+
+        .section-heading p {
+
+            max-width: 450px;
+
+            color:
+                rgba(255,255,255,0.65);
+
+        }
+
+
+        /* =========================
+           POST GRID
+        ========================== */
+
+        .posts-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+
+        }
+
+
+        .post-card {
+
+            background:
+                #102e25;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            transition: 0.3s ease;
+
+            cursor: pointer;
+
+        }
+
+
+        .post-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                rgba(255,255,255,0.2);
+
+        }
+
+
+        .post-image {
+
+            width: 100%;
+
+            aspect-ratio:
+                1 / 1.05;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        .post-content {
+
+            padding: 20px;
+
+        }
+
+
+        .post-number {
+
+            color:
+                var(--papaya);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .post-title {
+
+            font-family:
+                "Fraunces", serif;
+
+            font-size: 26px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .post-count {
+
+            color:
+                rgba(255,255,255,0.55);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+
+            width:
+                min(1200px, calc(100% - 40px));
+
+            margin: auto;
+
+            padding: 110px 0;
+
+            display: grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap: 80px;
+
+        }
+
+
+        .about-label {
+
+            color:
+                var(--papaya);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+        }
+
+
+        .about h2 {
+
+            font-family:
+                "Fraunces", serif;
+
+            color:
+                var(--palm-deep);
+
+            font-size:
+                clamp(40px, 5vw, 64px);
+
+            line-height: 1.05;
+
+            margin-top: 12px;
+
+        }
+
+
+        .about-content p {
+
+            color:
+                var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .about-content strong {
+
+            color:
+                var(--palm);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            background:
+                var(--palm-deep);
+
+            color: white;
+
+            padding: 45px 0;
+
+        }
+
+
+        .footer-inner {
+
+            width:
+                min(1200px, calc(100% - 40px));
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 25px;
+
+        }
+
+
+        .footer-brand {
+
+            font-family:
+                "Fraunces", serif;
+
+            font-size: 24px;
+
+        }
+
+
+        .footer-text {
+
+            color:
+                rgba(255,255,255,0.55);
+
+            font-size: 13px;
+
+        }
+
+
+        .footer-socials {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+        }
+
+
+        .footer-socials a {
+
+            color:
+                rgba(255,255,255,0.75);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .footer-socials a:hover {
+
+            color:
+                var(--papaya);
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .footer-socials {
+
+                flex-wrap: wrap;
+
+            }
+
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================== */
+
+        .gallery-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            background:
+                rgba(0,0,0,0.94);
+
+            overflow-y: auto;
+
+            padding: 30px 20px;
+
+        }
+
+
+        .gallery-container {
+
+            width:
+                min(900px, 100%);
+
+            margin: auto;
+
+        }
+
+
+        .gallery-close {
+
+            position: fixed;
+
+            top: 18px;
+
+            right: 22px;
+
+            width: 48px;
+
+            height: 48px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color:
+                var(--palm);
+
+            font-size: 30px;
+
+            line-height: 1;
+
+            cursor: pointer;
+
+            z-index: 10000;
+
+        }
+
+
+        .gallery-image {
+
+            width: 100%;
+
+            display: block;
+
+            margin-bottom: 20px;
+
+            border-radius: 16px;
+
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .hero {
+
+                grid-template-columns: 1fr;
+
+                padding: 65px 0;
+
+                gap: 50px;
+
+            }
+
+
+            .hero-visual {
+
+                order: -1;
+
+            }
+
+
+            .logo-card {
+
+                max-width: 330px;
+
+            }
+
+
+            .posts-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .about {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
+            }
+
+
+            .section-heading {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .nav {
+
+                width:
+                    min(100% - 28px, 1200px);
+
+                min-height: 68px;
+
+            }
+
+
+            .brand img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+            .brand-text {
+
+                font-size: 22px;
+
+            }
+
+
+            .hero {
+
+                width:
+                    min(100% - 28px, 1200px);
+
+                padding: 50px 0;
+
+            }
+
+
+            h1 {
+
+                font-size: 53px;
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .hero-description {
+
+                font-size: 16px;
+
+            }
+
+
+            .posts-section {
+
+                padding: 70px 0;
+
+            }
+
+
+            .section-inner {
+
+                width:
+                    min(100% - 28px, 1200px);
+
+            }
+
+
+            .posts-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .about {
+
+                width:
+                    min(100% - 28px, 1200px);
+
+                padding: 75px 0;
+
+            }
+
+
+            .footer-inner {
+
+                width:
+                    min(100% - 28px, 1200px);
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-  <!-- =========================
-       FIXED HERO
-       ========================= -->
-
-  <div class="top-screen">
-
-    <nav class="nav">
-
-      <a class="brand" href="#">
-        <img src="./logo.png" alt="Tropic NEEV logo">
-        <span>Tropic.</span>
-      </a>
-
-      <div class="nav-links">
-        <a href="#fashion">Fashion</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="#fashion">Explore</a>
-      </div>
-
-    </nav>
-
-    <div class="hero">
-
-      <div>
-
-        <div class="eyebrow">
-          NEEV Startup Stormers
-        </div>
-
-        <h1>
-          Fashion for Everyone.
-        </h1>
-
-        <p>
-          Tropic NEEV discovers affordable and trending fashion products,
-          curates the best options and brings them to customers through
-          social media and simple online shopping.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a class="button primary" href="#fashion">
-            Explore Fashion
-          </a>
-
-          <a class="button secondary" href="#about">
-            About Tropic
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="hero-bottom">
-
-        <span>
-          Tropic NEEV
-        </span>
-
-        <div class="scroll-note">
-          <span class="scroll-line"></span>
-          <span>Scroll to explore</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
-       MAIN CONTENT
-       ========================= -->
-
-  <main class="page-content">
 
     <!-- =========================
-         FASHION SECTION
-         ========================= -->
+         NAVIGATION
+    ========================== -->
 
-    <section class="fashion-section" id="fashion">
+    <header>
 
-      <div class="section-inner">
+        <nav class="nav">
 
-        <div class="fashion-intro">
+            <a
+                href="./"
+                class="brand"
+                aria-label="Tropic NEEV Home"
+            >
 
-          <div>
+                <img
+                    src="./logo.png"
+                    alt="Tropic NEEV logo"
+                >
 
-            <div class="section-label">
-              Curated collection
+                <div class="brand-text">
+                    Tropic<span>.</span>
+                </div>
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#fashion">
+                    Fashion
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
             </div>
 
-            <h2 class="section-title">
-              Fashion Picks.
-            </h2>
 
-          </div>
+            <a
+                href="#fashion"
+                class="nav-button"
+            >
+                Explore Fashion
+            </a>
 
-          <p>
-            We discover affordable and trending fashion products,
-            curate the best options and bring them to you through
-            simple, social-first shopping.
-          </p>
+        </nav>
 
-        </div>
-
-
-        <div class="shop-now">
-
-          <a href="#posts" class="shop-button">
-            <span class="cart-icon">🛒</span>
-            <span>Shop Now</span>
-          </a>
-
-          <p>
-            Find a style you like, explore the post and use its
-            individual Shop Now button to continue shopping.
-          </p>
-
-        </div>
-
-
-        <!-- POSTS ARE CREATED HERE -->
-
-        <div class="posts-grid" id="posts"></div>
-
-      </div>
-
-    </section>
+    </header>
 
 
     <!-- =========================
-         ABOUT SECTION
-         ========================= -->
+         MAIN
+    ========================== -->
 
-    <section class="about-section" id="about">
-
-      <div class="section-inner">
-
-        <div class="about-grid">
-
-          <div>
-
-            <div class="section-label">
-              About Tropic NEEV
-            </div>
-
-            <h2 class="section-title">
-              More than just a clothing page.
-            </h2>
-
-          </div>
+    <main>
 
 
-          <div class="about-copy">
+        <!-- HERO -->
 
-            <p>
-              Tropic NEEV is an affordable fashion discovery platform
-              built around social media marketing, e-commerce and
-              affiliate marketing.
-            </p>
+        <section
+            class="hero"
+            id="home"
+        >
 
-            <p>
-              Customers discover products through social media,
-              explore curated fashion picks and can move from
-              discovery to shopping in a simple way.
-            </p>
+            <div>
 
-            <p>
-              Our long-term goal is to understand what customers
-              actually want, identify winning products and grow
-              Tropic NEEV into a trusted online fashion brand.
-            </p>
+                <div class="hero-label">
+                    NEEV Startup Stormers Project
+                </div>
 
 
-            <div class="about-points">
+                <h1>
 
-              <div class="about-point">
+                    Fashion for
+                    <span>Everyone.</span>
 
-                <strong>
-                  Find.
-                </strong>
-
-                <span>
-                  Discover affordable and trending fashion.
-                </span>
-
-              </div>
+                </h1>
 
 
-              <div class="about-point">
+                <p class="hero-description">
 
-                <strong>
-                  Curate.
-                </strong>
+                    Tropic NEEV is an affordable fashion
+                    discovery platform combining social media
+                    marketing, e-commerce and affiliate marketing
+                    to help you discover trendy fashion without
+                    breaking your budget.
 
-                <span>
-                  Select products that are worth showing customers.
-                </span>
-
-              </div>
+                </p>
 
 
-              <div class="about-point">
+                <div class="hero-buttons">
 
-                <strong>
-                  Promote.
-                </strong>
-
-                <span>
-                  Use social media to reach the right audience.
-                </span>
-
-              </div>
+                    <a
+                        href="#fashion"
+                        class="primary-button"
+                    >
+                        Explore Fashion →
+                    </a>
 
 
-              <div class="about-point">
+                    <a
+                        href="#about"
+                        class="secondary-button"
+                    >
+                        About Tropic
+                    </a>
 
-                <strong>
-                  Grow.
-                </strong>
-
-                <span>
-                  Use customer response to build a stronger fashion brand.
-                </span>
-
-              </div>
+                </div>
 
             </div>
 
-          </div>
 
-        </div>
+            <div class="hero-visual">
 
-      </div>
+                <div class="logo-card">
 
-    </section>
+                    <img
+                        src="./logo.png"
+                        alt="Tropic NEEV Fashion for Everyone"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FASHION POSTS
+        ========================== -->
+
+        <section
+            class="posts-section"
+            id="fashion"
+        >
+
+            <div class="section-inner">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Latest Fashion
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Explore our latest affordable
+                        fashion discoveries.
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="posts-grid"
+                    id="postsGrid"
+                >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            class="about"
+            id="about"
+        >
+
+            <div>
+
+                <div class="about-label">
+                    About Tropic NEEV
+                </div>
+
+
+                <h2>
+                    More than just clothes.
+                </h2>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <p>
+
+                    <strong>Tropic NEEV</strong> combines
+                    social media marketing, e-commerce and
+                    affiliate marketing to create a simple way
+                    for customers to discover affordable fashion.
+
+                </p>
+
+
+                <p>
+
+                    We select interesting and trending products,
+                    present them through social media and organize
+                    them in one easy-to-browse online platform.
+
+                </p>
+
+
+                <p>
+
+                    Our goal is simple:
+
+                    <strong>
+                        help everyone find the right fashion
+                        within their budget.
+                    </strong>
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
 
 
     <!-- =========================
          FOOTER
-         ========================= -->
+    ========================== -->
 
     <footer>
 
-      <div class="footer-inner">
+        <div class="footer-inner">
 
-        <div>
-
-          <div class="footer-brand">
-            TROPIC
-          </div>
-
-          <div class="footer-tagline">
-            Fashion for Everyone.
-          </div>
-
-        </div>
+            <div class="footer-brand">
+                Tropic NEEV
+            </div>
 
 
-        <div class="footer-right">
+            <div class="footer-socials">
 
-          <div>
-            NEEV Startup Stormers
-          </div>
+                <a
+                    href="mailto:tropic.neev@email.com"
+                >
+                    tropic.neev@email.com
+                </a>
 
-          <div>
-            <a href="mailto:tropic.neev@gmail.com">
-              tropic.neev@gmail.com
-            </a>
-          </div>
 
-          <div>
-            Instagram:
-            <a
-              href="https://www.instagram.com/tropic.neev?stkn=MnV6bmNvdXN3eXU="
-              target="_blank"
-              rel="noopener"
-            >
-              @tropic.neev
-            </a>
-          </div>
+                <a
+                    href="https://www.instagram.com/tropic.neev?stkn=MnV6bmNvdXN3eXU="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+            </div>
+
+
+            <div class="footer-text">
+
+                © 2026 Tropic NEEV ·
+                NEEV Startup Stormers Project
+
+            </div>
 
         </div>
-
-      </div>
-
-
-      <div class="footer-bottom">
-
-        © <span id="year"></span>
-        Tropic NEEV. All rights reserved.
-
-      </div>
 
     </footer>
 
-  </main>
+
+    <!-- =========================
+         POSTS + GALLERY
+    ========================== -->
+
+    <script>
 
 
-  <!-- =========================
-       POST SYSTEM
-       ========================= -->
+        /*
+        =========================================================
 
-  <script>
+        TROPIC NEEV POST SETTINGS
 
-    /*
-      FOLDER STRUCTURE:
+        You have 11 possible folders:
 
-      TropicNeev.com/
-      │
-      ├── home.html
-      ├── logo.png
-      │
-      ├── 1/
-      │   ├── 1.jpg
-      │   ├── 2.jpg
-      │   └── 3.jpg
-      │
-      ├── 2/
-      │   ├── 1.jpg
-      │   ├── 2.jpg
-      │   └── 3.jpg
-      │
-      ├── 3/
-      │   ├── 1.jpg
-      │   ├── 2.jpg
-      │   └── 3.jpg
-      │
-      └── etc.
+        1/
+        2/
+        3/
+        4/
+        5/
+        6/
+        7/
+        8/
+        9/
+        10/
+        11/
 
-      TRUE  = SHOW POST
-      FALSE = HIDE POST
+        Each folder contains:
 
-      ALL 11 POSTS ARE CURRENTLY ENABLED.
-    */
+        1.jpg
+        2.jpg
+        3.jpg
 
+        =========================================================
 
-    const availablePosts = {
+        IMPORTANT:
 
-      1: true,
-      2: true,
-      3: true,
-      4: true,
-      5: true,
-      6: true,
-      7: true,
-      8: true,
-      9: true,
-      10: true,
-      11: true
+        true  = show this post
+        false = don't show this post
 
-    };
+        If a folder doesn't exist yet,
+        keep it false.
+
+        =========================================================
+        */
 
 
-    const postsContainer =
-      document.getElementById("posts");
+        const availablePosts = {
 
 
-    /* =========================
-       CREATE POST
-       ========================= */
-
-    function createPost(number) {
-
-      const article =
-        document.createElement("article");
-
-      article.className = "post";
+            1: true,
 
 
-      article.innerHTML = `
-
-        <div
-          class="post-media"
-          data-post="${number}"
-        >
-
-          <div class="post-track">
-
-            <img
-              src="./${number}/1.jpg"
-              alt="Tropic NEEV Fashion Pick ${number} - image 1"
-              draggable="false"
-            >
-
-            <img
-              src="./${number}/2.jpg"
-              alt="Tropic NEEV Fashion Pick ${number} - image 2"
-              draggable="false"
-            >
-
-            <img
-              src="./${number}/3.jpg"
-              alt="Tropic NEEV Fashion Pick ${number} - image 3"
-              draggable="false"
-            >
-
-          </div>
-
-        </div>
+            2: true,
 
 
-        <div class="post-number">
-          Tropic — Post ${number}
-        </div>
+            3: true,
 
 
-        <h3 class="post-title">
-          Fashion Pick
-        </h3>
+            4: true,
 
 
-        <div class="post-bottom">
-
-          <div class="dots" aria-hidden="true">
-
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-
-          </div>
+            5: false,
 
 
-          <!--
-            KEEP href="" EMPTY FOR NOW.
-            ADD THE PRODUCT LINK HERE LATER.
-          -->
-
-          <a class="post-shop" href="">
-            🛒 Shop Now
-          </a>
-
-        </div>
-
-      `;
+            6: false,
 
 
-      postsContainer.appendChild(article);
+            7: false,
 
 
-      setupSwipe(
-        article.querySelector(".post-media")
-      );
-
-    }
+            8: false,
 
 
-    /* =========================
-       SWIPE SYSTEM
-       ========================= */
-
-    function setupSwipe(media) {
-
-      const track =
-        media.querySelector(".post-track");
-
-      const dots =
-        media.parentElement.querySelectorAll(".dot");
+            9: false,
 
 
-      let current = 0;
-
-      let startX = 0;
-      let currentX = 0;
-
-      let dragging = false;
+            10: false,
 
 
-      function updateSlide() {
-
-        track.style.transform =
-          `translateX(-${current * 100}%)`;
+            11: false
 
 
-        dots.forEach((dot, index) => {
+        };
 
-          dot.classList.toggle(
-            "active",
-            index === current
-          );
+
+        /*
+        =========================================================
+        POST DATA
+        =========================================================
+        */
+
+        const posts = [];
+
+
+        for (
+            let number = 1;
+            number <= 11;
+            number++
+        ) {
+
+
+            if (
+                availablePosts[number] === true
+            ) {
+
+
+                posts.push({
+
+                    number: number,
+
+                    images: [
+
+                        `./${number}/1.jpg`,
+
+                        `./${number}/2.jpg`,
+
+                        `./${number}/3.jpg`
+
+                    ]
+
+                });
+
+
+            }
+
+        }
+
+
+        /*
+        =========================================================
+        CREATE POST CARDS
+        =========================================================
+        */
+
+        const postsGrid =
+            document.getElementById(
+                "postsGrid"
+            );
+
+
+        posts.forEach(post => {
+
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+
+            card.className =
+                "post-card";
+
+
+            card.innerHTML = `
+
+                <img
+                    class="post-image"
+                    src="${post.images[0]}"
+                    alt="Tropic NEEV fashion post ${post.number}"
+                    loading="lazy"
+                >
+
+                <div class="post-content">
+
+                    <div class="post-number">
+
+                        Tropic · Post ${post.number}
+
+                    </div>
+
+
+                    <div class="post-title">
+
+                        Fashion Pick
+
+                    </div>
+
+
+                    <div class="post-count">
+
+                        3 images · Tap to view
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            card.addEventListener(
+                "click",
+                function () {
+
+                    openGallery(post);
+
+                }
+            );
+
+
+            postsGrid.appendChild(card);
+
 
         });
 
-      }
+
+        /*
+        =========================================================
+        OPEN GALLERY
+        =========================================================
+        */
+
+        function openGallery(post) {
 
 
-      function move(direction) {
-
-        current += direction;
-
-
-        if (current < 0) {
-          current = 2;
-        }
+            const overlay =
+                document.createElement(
+                    "div"
+                );
 
 
-        if (current > 2) {
-          current = 0;
-        }
+            overlay.className =
+                "gallery-overlay";
 
 
-        updateSlide();
-
-      }
-
-
-      /* TOUCH */
-
-      media.addEventListener(
-        "touchstart",
-        (event) => {
-
-          startX =
-            event.touches[0].clientX;
-
-        },
-        { passive: true }
-      );
+            const container =
+                document.createElement(
+                    "div"
+                );
 
 
-      media.addEventListener(
-        "touchend",
-        (event) => {
-
-          const endX =
-            event.changedTouches[0].clientX;
+            container.className =
+                "gallery-container";
 
 
-          const difference =
-            startX - endX;
+            const close =
+                document.createElement(
+                    "button"
+                );
 
 
-          if (Math.abs(difference) > 45) {
+            close.className =
+                "gallery-close";
 
-            move(
-              difference > 0
-                ? 1
-                : -1
+
+            close.innerHTML =
+                "×";
+
+
+            close.setAttribute(
+                "aria-label",
+                "Close gallery"
             );
 
-          }
 
-        },
-        { passive: true }
-      );
-
-
-      /* MOUSE */
-
-      media.addEventListener(
-        "mousedown",
-        (event) => {
-
-          dragging = true;
-
-          startX =
-            event.clientX;
-
-          currentX =
-            event.clientX;
-
-        }
-      );
-
-
-      window.addEventListener(
-        "mousemove",
-        (event) => {
-
-          if (!dragging) {
-            return;
-          }
-
-          currentX =
-            event.clientX;
-
-        }
-      );
-
-
-      window.addEventListener(
-        "mouseup",
-        () => {
-
-          if (!dragging) {
-            return;
-          }
-
-
-          const difference =
-            startX - currentX;
-
-
-          if (Math.abs(difference) > 45) {
-
-            move(
-              difference > 0
-                ? 1
-                : -1
+            close.addEventListener(
+                "click",
+                closeGallery
             );
 
-          }
+
+            /*
+            Add all three images.
+            */
+
+            post.images.forEach(
+                function (
+                    imagePath,
+                    index
+                ) {
 
 
-          dragging = false;
+                    const image =
+                        document.createElement(
+                            "img"
+                        );
+
+
+                    image.className =
+                        "gallery-image";
+
+
+                    image.src =
+                        imagePath;
+
+
+                    image.alt =
+                        `Tropic NEEV Post ${post.number} image ${index + 1}`;
+
+
+                    image.loading =
+                        "lazy";
+
+
+                    container.appendChild(
+                        image
+                    );
+
+
+                }
+            );
+
+
+            overlay.appendChild(
+                close
+            );
+
+
+            overlay.appendChild(
+                container
+            );
+
+
+            document.body.appendChild(
+                overlay
+            );
+
+
+            document.body.style.overflow =
+                "hidden";
+
+
+            /*
+            Close when clicking
+            outside the images.
+            */
+
+            overlay.addEventListener(
+                "click",
+                function (event) {
+
+
+                    if (
+                        event.target === overlay
+                    ) {
+
+                        closeGallery();
+
+                    }
+
+                }
+            );
+
+
+            /*
+            Close function.
+            */
+
+            function closeGallery() {
+
+
+                overlay.remove();
+
+
+                document.body.style.overflow =
+                    "";
+
+            }
 
         }
-      );
 
 
-      /* PREVENT IMAGE DRAG */
+        /*
+        =========================================================
+        ESC KEY
+        =========================================================
+        */
 
-      media.addEventListener(
-        "dragstart",
-        (event) => {
-
-          event.preventDefault();
-
-        }
-      );
-
-    }
+        document.addEventListener(
+            "keydown",
+            function (event) {
 
 
-    /* =========================
-       LOAD ENABLED POSTS
-       ========================= */
-
-    Object.keys(availablePosts).forEach(
-      (number) => {
-
-        if (availablePosts[number]) {
-
-          createPost(number);
-
-        }
-
-      }
-    );
+                if (
+                    event.key === "Escape"
+                ) {
 
 
-    /* =========================
-       FOOTER YEAR
-       ========================= */
+                    const gallery =
+                        document.querySelector(
+                            ".gallery-overlay"
+                        );
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
 
-  </script>
+                    if (gallery) {
+
+
+                        gallery.remove();
+
+
+                        document.body.style.overflow =
+                            "";
+
+
+                    }
+
+                }
+
+            }
+        );
+
+
+    </script>
+
 
 </body>
+
 </html>
